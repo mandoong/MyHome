@@ -22,6 +22,20 @@
                 <div class="text-blue-400">Google Inc</div>
             </div>
         </div>
+
+        <div class="w-full text-center  mt-20 text-2xl">
+            @JeongWoongLee
+        </div>
+        
+        <div class="my-10">
+            <ul class="flex justify-between space-x-2">
+                <li class="w-1/5 flex flex-nowrap" v-for="img in gellery" :key="img">
+                    <div class="flex flex-nowrap">
+                        <img  :src="img">
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -32,7 +46,7 @@ export default {
     data() {
         return {
             count: 1,
-            active: false,
+            active: true,
             words: [
                 ["“One person can make a difference,","and everyone should try.”"],
                 ["“Courage and perseverance", "have a magical talisman, before which difficulties", "disappear and obstacles vanish into air.”"],
@@ -42,45 +56,55 @@ export default {
             ],
             on: {
                 "opacity-0": false
-            }
+            },
+
+            gellery: [
+                "src/assets/candy.jpg", "src/assets/cat.jpg", "src/assets/hat.jpg", "src/assets/mini.jpg", "src/assets/tree.jpg"
+            ]
 
         }
     },
 
     methods: {
         countDown() {
-            this.on['opacity-0'] = true;
+            if (this.active) {
+                this.on['opacity-0'] = true;
+                this.active = false;
+                
+                setTimeout(function() {
+                    if (this.count <= 0) {
+                        this.count = this.words.length -1;
+                    }
+                    else {
+                        this.count--
+                    }
 
-            setTimeout(function() {
-                if (this.count <= 0) {
-                    this.count = this.words.length -1;
-                }
-                else {
-                    this.count--
-                }
-
-                this.on['opacity-0'] = false;
-            }.bind(this),1000
-            );
+                    this.on['opacity-0'] = false;
+                    this.active = true;
+                }.bind(this),1000
+                );
+            }
         },
 
         countUp() {
-            this.on['opacity-0'] = true;
+            if (this.active) {
+                this.on['opacity-0'] = true;
+                this.active = false;
 
-            setTimeout(function() {
-                if (this.count >= this.words.length -1) {
-                    this.count = 0
-                }
-                else {
-                    this.count++
-                }
+                setTimeout(function() {
+                    if (this.count >= this.words.length -1) {
+                        this.count = 0
+                    }
+                    else {
+                        this.count++
+                    }
 
-                this.on['opacity-0'] = false;
-            }.bind(this),1000
-            )
-            
-
-        },
+                    this.on['opacity-0'] = false;
+                    this.active = true;
+                    }.bind(this),1000
+                )
+            }
+        }
     }
 }
 
