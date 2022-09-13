@@ -36,6 +36,19 @@
                 </li>
             </ul>
         </div>
+
+        <div class="my-40 flex justify-center" >
+            <div class="w-80 h-80 p-16 border-4 border-dotted rounded-full flex justify-center flex-col">
+                <div class="uppercase text-xs text-gray-400">
+                    <div>describe your</div>
+                    <div>project</div>
+                </div>
+                <div class="text-6xl">
+                    <div>Call</div>
+                    <div>Woong</div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -81,7 +94,7 @@ export default {
 
                     this.on['opacity-0'] = false;
                     this.active = true;
-                }.bind(this),1000
+                }.bind(this),100
                 );
             }
         },

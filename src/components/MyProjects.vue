@@ -16,6 +16,12 @@
                 </ul>   
             </div> 
         </div>
+
+        <div>
+           aaa 
+           {{s}}
+           <div>click</div>
+        </div>
     </div>
     
 </template>
@@ -26,6 +32,7 @@
 export default {
     data() {
         return {
+            s: window.scrollY,
             gallery : [
                 {'img' : 'url', 'velue' : 'Web Design', 'name' : 'Supro Online Store' },
                 {'img' : 'url', 'velue' : 'Illustraion', 'name' : 'LW Poster' },
@@ -33,8 +40,16 @@ export default {
                 {'img' : 'url', 'velue' : 'Web Design', 'name' : 'SSG Market' },
                 {'img' : 'url', 'velue' : 'Grid Design', 'name' : 'Mine Cube Craft' },
                 {'img' : 'url', 'velue' : 'Full Design', 'name' : 'Flex Of The Flex' },
-            ]
+            ],
         }
+    },
+
+    methods: {
+        
+        scroll() {
+            this.s = window.scrollY
+        }
+
     }
 }
 

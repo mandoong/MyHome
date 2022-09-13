@@ -19,10 +19,10 @@
         <div>Jeong Woong</div>
       </div>
     </div>
-    <div class="w-40 pl-10 flex justify-between items-center">
-      <div class="w-5 h-5">G</div>
-      <div class="w-5 h-5">I</div>
-      <div class="w-5 h-5">K</div>
+    <div class="w-40 flex justify-between items-center">
+      <img class="w-6 h-6" src="src/assets/git.png">
+      <img class="w-6 h-6" src="src/assets/instar.png">
+      <img class="w-6 h-6" src="src/assets/kakao.png">
     </div>
   </div>
   <div class="text-[3em] flex justify-center items-center flex-col mt-12">
@@ -88,13 +88,28 @@
   </div>
 
   <div class="border-t-[1px] border-solid border-black h-1"></div>
+
   <Home></Home>
   <div class="border-t-[1px] border-solid border-black h-1"></div>
+
   <education></education>
   <div class="border-t-[1px] border-solid border-black h-1"></div>
+
   <MyProjects></MyProjects>
   <div class="border-t-[1px] border-solid border-black h-1"></div>
+
   <callme></callme>
+  <div class="border-t-[1px] border-solid border-black h-1"></div>
+
+  <div class="flex justify-between my-16 uppercase font-sans">
+    <div class="w-80">@ 2020 moonex. all right reserved</div>
+    <div class="w-40">ljw0566@gmail.com</div>
+    <div class="w-80 pl-40 flex justify-between">
+      <img class="w-6 h-6" src="src/assets/git.png">
+      <img class="w-6 h-6" src="src/assets/instar.png">
+      <img class="w-6 h-6" src="src/assets/kakao.png">
+    </div>
+  </div>
 </div>
 
 </div>
