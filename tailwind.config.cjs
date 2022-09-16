@@ -5,7 +5,19 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "open": "open 5s ease-out infinite"
+
+        },
+      keyframes: {
+        open: {
+          "0%, 100%": { transform: "scale(1)"}, 
+          "50%": { transform: "scale(1.5)"}, 
+        }
+      }, 
+    },
+
   },
     fontFamily: {
       'sans': ['ui-sans-serif', 'Arial'],

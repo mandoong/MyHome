@@ -38,7 +38,7 @@
         </div>
 
         <div class="my-40 flex justify-center" >
-            <div class="w-80 h-80 p-16 border-4 border-dotted rounded-full flex justify-center flex-col">
+            <div class="w-80 h-80 p-16 border-[5px] border-dotted rounded-full flex justify-center flex-col">
                 <div class="uppercase text-xs text-gray-400">
                     <div>describe your</div>
                     <div>project</div>
@@ -128,6 +128,15 @@ export default {
 
 .on {
     opacity: 0;
+}
+
+@keyframes open {
+    from {
+        left: -200px;
+    }
+    to{
+        left: 0px;
+    }
 }
 
 
